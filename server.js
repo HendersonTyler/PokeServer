@@ -21,21 +21,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const database = {
-    score: [
-        {
-            name: 'John',
-            pokemon: 'eevee',
-            tally: 3
-        },
-        {
-            name: 'John',
-            pokemon: 'eevee',
-            tally: 3
-        }
-    ]
-}
-
 app.get('/', (req, res) => {
     db.select('*').from('score').then(data => {
         res.send(data);
