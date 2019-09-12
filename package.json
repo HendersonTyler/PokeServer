@@ -1,5 +1,5 @@
 {
-  "name": "pokemonserver",
+  "name": "node",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -14,10 +14,7 @@
     "nodemon": "^1.19.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
