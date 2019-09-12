@@ -6,10 +6,8 @@ const knex = require('knex')
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: '',
-        password: '',
-        database: 'score'
+        host: process.env.DATABASE_URL,
+        ssl: true,
     }
 });
 
@@ -23,7 +21,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     db.select('*').from('score').then(data => {
-        res.send('it is working');
+        res.send(data);
     })
 })
 
