@@ -23,7 +23,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     db.select('*').from('score').then(data => {
-        res.send(data);
+        res.send('it is working');
     })
 })
 
