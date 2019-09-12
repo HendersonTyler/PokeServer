@@ -58,7 +58,7 @@ app.post('/score', (req, res) => {
 })
 
 app.get('/top', (req, res) => {
-    db('score').orderBy('tally', 'desc').limit(2).then(data => {
+    db('score').orderBy('tally', 'desc').limit(10).then(data => {
         res.send(data);
     })
 })
